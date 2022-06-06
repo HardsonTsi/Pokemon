@@ -5,7 +5,6 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "buildGHPAGE": "ng build --prod --base-href \"https://HardsonTsi.github.io/POKEMON/\"",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
