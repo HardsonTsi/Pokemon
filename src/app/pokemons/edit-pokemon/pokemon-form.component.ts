@@ -1,12 +1,13 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { PokemonsService } from '../pokemons.service';
-import { Pokemon } from '../pokemon';
+import {Component, Input, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {Pokemon} from '../pokemon';
+import {PokemonsService} from '../pokemons.service';
 
 @Component({
   selector: 'pokemon-form',
   templateUrl: './pokemon-form.component.html',
-styleUrls: ['./pokemon-form.component.css']})
+  styleUrls: ['./pokemon-form.component.css']
+})
 
 export class PokemonFormComponent implements OnInit {
 
@@ -16,7 +17,8 @@ export class PokemonFormComponent implements OnInit {
 
   constructor(
     private pokemonsService: PokemonsService,
-    private router: Router) { }
+    private router: Router) {
+  }
 
   ngOnInit() {
     // Initialisation de la propriété types
@@ -59,8 +61,8 @@ export class PokemonFormComponent implements OnInit {
 
   // La méthode appelée lorsque le formulaire est soumis.
   onSubmit(): void {
-  this.pokemonsService.updatePokemon(this.pokemon)
-    .subscribe( () => this.goBack());
+    this.pokemonsService.updatePokemon(this.pokemon)
+      .subscribe(() => this.goBack());
   }
 
   goBack(): void {

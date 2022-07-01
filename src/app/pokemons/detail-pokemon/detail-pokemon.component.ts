@@ -3,11 +3,11 @@ import {ActivatedRoute, Router} from '@angular/router';
 
 import {Pokemon} from '../pokemon';
 import {PokemonsService} from "../pokemons.service";
-import {Observable} from "rxjs";
 
 @Component({
   selector: 'detail-pokemon',
   templateUrl: './detail-pokemon.component.html',
+  styleUrls: ['./detail-pokemon.component.css']
 })
 
 export class DetailPokemonComponent implements OnInit {
@@ -26,12 +26,12 @@ export class DetailPokemonComponent implements OnInit {
       .subscribe(pokemon => this.pokemon = pokemon);
   }
 
-  goEdit(pokemon: Pokemon){
+  goEdit(pokemon: Pokemon) {
     let link = ['/pokemon/edit', this.pokemon.id];
     this.router.navigate(link);
   }
 
-  deletePokemon(pokemon: Pokemon): void{
+  deletePokemon(pokemon: Pokemon): void {
     this.pokemonsService.deletePokemon(pokemon)
       .subscribe(() => this.goBack());
   }

@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { SearchPokemonComponent } from './search-pokemon.component';
+import {SearchPokemonComponent} from './search-pokemon.component';
 
 describe('SearchPokemonComponent', () => {
   let component: SearchPokemonComponent;
@@ -8,9 +8,9 @@ describe('SearchPokemonComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SearchPokemonComponent ]
+      declarations: [SearchPokemonComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

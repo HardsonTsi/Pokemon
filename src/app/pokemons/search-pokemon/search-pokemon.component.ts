@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {Observable, Subject} from 'rxjs';
 // RxJS 6
-import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
-import { Observable, Subject, of } from 'rxjs';
+import {debounceTime, distinctUntilChanged, switchMap} from 'rxjs/operators';
+import {Pokemon} from '../pokemon';
 
-import { PokemonsService } from '../pokemons.service';
-import { Pokemon } from '../pokemon';
+import {PokemonsService} from '../pokemons.service';
 
 @Component({
   selector: 'pokemon-search',
@@ -13,12 +13,13 @@ import { Pokemon } from '../pokemon';
 })
 export class PokemonSearchComponent implements OnInit {
 
-  private searchTerms = new Subject<string>();
   pokemons$: Observable<Pokemon[]>;
+  private searchTerms = new Subject<string>();
 
   constructor(
     private pokemonsService: PokemonsService,
-    private router: Router) { }
+    private router: Router) {
+  }
 
   // Ajoute un terme de recherche dans le flux de l'Observable 'searchTerms'
   search(term: string): void {
@@ -36,7 +37,7 @@ export class PokemonSearchComponent implements OnInit {
     );
   }
 
-  gotoDetail(pokemon: Pokemon): void{
+  gotoDetail(pokemon: Pokemon): void {
     let link = ['/pokemon', pokemon.id];
     this.router.navigate(link);
   }

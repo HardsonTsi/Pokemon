@@ -34,10 +34,10 @@
             </tbody>
           </table>
         </div>
-        <div class="card-action">
-          <a (click)="goBack()" class="waves-effects waves-light btn">Retour</a>
-          <a (click)="goEdit(pokemon)" class="waves-effects waves-light btn">Editer</a>
-          <a (click)="deletePokemon(pokemon)">Supprimer</a>
+        <div class="card-action space-btn">
+          <a (click)="goBack()" class="waves-effects waves-light btn lighten-1 ">Retour</a>
+          <a (click)="goEdit(pokemon)" class="waves-effects waves-light btn lighten-1 ">Editer</a>
+          <a (click)="deletePokemon(pokemon)" class="red waves-effects waves-light red  pink btn">Supprimer</a>
         </div>
       </div>
     </div>
@@ -45,5 +45,5 @@
 </div>
 
 <h4 *ngIf="!pokemon" class="center">
-<loader-pokemon></loader-pokemon>
+  <loader-pokemon></loader-pokemon>
 </h4>

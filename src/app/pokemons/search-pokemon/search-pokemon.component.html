@@ -8,8 +8,8 @@
         </div>
 
         <div class="collection">
-          <a *ngFor="let pokemon of pokemons$ | async"
-             (click)="gotoDetail(pokemon)" class="collection-item">
+          <a (click)="gotoDetail(pokemon)"
+             *ngFor="let pokemon of pokemons$ | async" class="collection-item">
             {{ pokemon.name }}
           </a>
         </div>

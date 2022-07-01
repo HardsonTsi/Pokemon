@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Rattrapage'`, () => {
+  it(`should have as title 'Pokémon'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Rattrapage');
+    expect(app.title).toEqual('Pokémon');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('Rattrapage app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('Pokémon app is running!');
   });
 });

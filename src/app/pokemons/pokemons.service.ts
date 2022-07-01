@@ -1,9 +1,9 @@
-import {Injectable} from '@angular/core';
-
-import {Pokemon} from './pokemon';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {Injectable} from '@angular/core';
 import {Observable, of} from "rxjs";
 import {catchError, tap} from "rxjs/operators";
+
+import {Pokemon} from './pokemon';
 
 @Injectable()
 export class PokemonsService {
@@ -64,7 +64,6 @@ export class PokemonsService {
       catchError(this.handleError<Pokemon[]>(`searchPokemons`, []))
     );
   }
-
 
 
   // Retourne la liste des types des Pokémons
