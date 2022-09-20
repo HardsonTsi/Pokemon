@@ -27,7 +27,7 @@
               "src/assets"
             ],
             "styles": [
-              "materialize/css/materialize.css",
+              "node_modules/materialize/css/materialize.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -96,7 +96,7 @@
             ],
             "styles": [
               "src/styles.css",
-              "./materialize/css/materialize.css"
+              "node_modules/materialize/css/materialize.css"
             ],
             "scripts": []
           }
