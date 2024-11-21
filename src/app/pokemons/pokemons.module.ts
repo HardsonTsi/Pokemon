@@ -11,12 +11,14 @@ import {PokemonTypeColorPipe} from './pokemon-type-color.pipe';
 import {PokemonRoutingModule} from "./pokemons-routing.module";
 import {PokemonsService} from "./pokemons.service";
 import {PokemonSearchComponent} from "./search-pokemon/search-pokemon.component";
+import {LoaderComponent} from "./loader/loader.component";
 
 @NgModule({
   imports: [
     CommonModule, FormsModule, PokemonRoutingModule
   ],
   declarations: [
+    LoaderComponent,
     ListPokemonsComponent,
     DetailPokemonComponent,
     EditPokemonComponent,
